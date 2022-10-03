@@ -7,7 +7,7 @@
                 fetch="https://github.com/for-personal" />
 
       	<!-- Device Sauce -->
-        <project path="device/realme/RMX1821" name="device_realme_RMX1821" remote="for-personal" revision="xd" clone-depth="1" />
+        <project path="device/realme/RMX1821" name="device_realme_RMX1821" remote="for-personal" revision="sp" clone-depth="1" />
         <project path="vendor/realme/RMX1821" name="vendor_realme_RMX1821" remote="Subash2001" revision="twelve" clone-depth="1" />
 	<project path="kernel/realme/RMX1821" name="kernel_realme_RMX1821" remote="Subash2001" revision="Q" clone-depth="1" />
 	
@@ -21,15 +21,15 @@
         <project path="vendor/mediatek-ims" name="vendor_mediatek-ims" remote="for-personal" revision="twelve" clone-depth="1" />
 	
 	<!-- Patch -->
-        <remove-project name="xd_build" />
-	<project path="build/make" name="xd_build" groups="pdk" remote="for-personal" revision="twelve-android-12.1.0_r22" >
+        <remove-project name="build_make" />
+	<project path="build/make" name="build_make" remote="for-personal" revision="spark" >
         <copyfile src="core/root.mk" dest="Makefile" />
         <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
         <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
         <linkfile src="core" dest="build/core" />
         <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
         <linkfile src="target" dest="build/target" />
-	<linkfile src="tools" dest="build/tools" />
+        <linkfile src="tools" dest="build/tools" />
         </project>
 
 </manifest>
